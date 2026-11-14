@@ -277,6 +277,7 @@ body {
   padding: 100px 40px;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -287,3 +288,63 @@ body {
   max-width: 800px;
   text-align: center;
 }
+
+.about-section .section-tag {
+  color: #e64b3c;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.about-section h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 25px;
+}
+
+.about-section .section-heading > p:last-child {
+  max-width: 650px;
+  margin: auto;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.about-cards {
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  margin-top: 55px;  
+}
+
+.about-card {
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 15px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+  border-color: #f3b5ae;
+}
+
+.card-icon {
+  width: 35px;
+  height: 35px;
+  color: #e64b3c;
+  margin-bottom: 10px;
+  stroke-width: 2;
+}
+
