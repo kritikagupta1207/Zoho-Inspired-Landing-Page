@@ -1,0 +1,289 @@
+/* GLOBAL */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* HEADER */
+
+.site-header{
+  width: 100%;
+  padding: 8px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);  /* glass like effect */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* NAVIGATION */
+
+.logo img{
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.navbar{
+  padding: 20px;
+}
+
+.navbar ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a{
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 12px;
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover{
+  color: #e64b3c;
+  background-color: #fff1ef;
+  border-radius: 20px;
+}
+
+.logo img{
+  margin-left: 10px;
+}
+
+/* MAIN HERO SECTION */
+
+.main-hero{
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 40px 50px;
+  padding-top: 130px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+/* HERO TEXT */
+
+.hero-text {
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-tag{
+  color: #e64b3c;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero-text h1 {
+  font-size: clamp(25px, 4vw, 65px);
+  line-height: 1.15;
+  color: #222;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.hero-text h1 span {
+  color: #e64b3c;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #c93629;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #c93629;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(230, 75, 60, 0.25);
+}
+
+.secondary-btn {
+  background-color: #f5f5f5;
+  color: #e64b3c;
+  transform: translateY(-4px);
+}
+
+/* SCROLL INDICARTOR */
+
+.scroll-down {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #777;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.scroll-down:hover {
+  color: #e64b3c;
+}
+
+/* ZOHO LOGO ANIMATION */
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.Box {
+  width: 150px;
+  height: 180px;
+  border-radius: 30px;
+
+  font-size: 140px;
+  color: white;
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sub1 {
+  background-color: red;
+}
+
+.sub2 {
+  background-color: green;
+}
+
+.sub3 {
+  background-color: rgb(0, 89, 255);
+}
+
+.sub4 {
+  background-color: yellow;
+}
+
+.logo-container:hover .Box {
+  background-color: transparent;
+  transform: scale(1.1);  /* Zoom in effect (1.1 = 110%) */
+}
+
+.sub2,
+.sub4 {
+    transform: translateY(12px);
+}
+
+
+.logo-container:hover .sub1 {
+  border: 12px solid red;
+  color: red;
+  transform: translateX(30px) rotate(-12deg) scale(1.1);
+}
+
+.logo-container:hover .sub2 {
+  border: 12px solid green;
+  color: green;
+  transform: translate(10px) rotate(20deg) scale(1.1);
+}
+
+.logo-container:hover .sub3 {
+  border: 12px solid blue;
+  color: blue;
+  transform: translate(-10px) rotate(-15deg) scale(1.1);
+}
+
+.logo-container:hover .sub4 {
+  border: 12px solid yellow;
+  color: yellow;
+  transform: translate(-30px, 0) rotate(12deg) scale(1.1);
+}
+
+.about-section {
+  width: 100%;
+  min-height: 75vh;
+  padding: 100px 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f8f8f8;
+}
+
+.about-section .section-heading {
+  max-width: 800px;
+  text-align: center;
+}
