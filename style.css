@@ -354,7 +354,7 @@ body {
 .products-section {
   width: 100%;
   padding: 100px 7%;
-  background-color: white;
+  background-color: #fff;
 }
 
 /* Section Heading */
@@ -402,7 +402,6 @@ body {
   background-color: white;
   font-size: 15px;
   transition: all 0.3s ease;
-  margin-bottom: 20px;
 }
 
 .product-search input:focus {
@@ -416,7 +415,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 
 .filter-btn {
@@ -428,7 +427,6 @@ body {
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 20px;
 }
 
 .filter-btn:hover {
@@ -436,7 +434,7 @@ body {
   color: #e42527;
 }
 
-.filter-bte.active {
+.filter-btn.active {
   background-color: #e42527;
   border-color: #e42527;
   color: white;
@@ -444,12 +442,13 @@ body {
 
 .product-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 25px;
 }
 
 .product-card {
-  padding: 30px;
+  padding: 25px 25px;
+  min-height: 250px;
   background-color: white;
   border: 1px solid #eee;
   border-radius: 16px;
@@ -463,6 +462,18 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
 }
 
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 .app-icon {
   width: 55px;
   height: 55px;
@@ -474,19 +485,25 @@ body {
   color: #e42527;
   font-size: 15px;
   font-weight: 700;
+  margin-bottom: 25px;
 }
 
-.app-icon:nth-child(4n + 2) app-icon {
+.product-card:nth-child(4n + 1) .app-icon {
+  background-color: #fff1ef;
+  color: #e42527;
+}
+
+.product-card:nth-child(4n + 2) .app-icon {
   background-color: #eaf6ef;
   color: #089949;
 }
 
-.app-icon:nth-child(4n + 3) app-icon {
+.product-card:nth-child(4n + 3) .app-icon {
   background-color: #eaf4fc;
   color: #226db4;
 }
 
-.app-icon:nth-child(4n + 4) app-icon {
+.product-card:nth-child(4n + 4) .app-icon {
   background-color: #fff7e5;
   color: #d99a00;
 }
@@ -501,7 +518,7 @@ body {
   color: #666;
   font-size: 14px;
   line-height: 1.7;
-  min-height: 72px;
+  margin-bottom: 14px;
 }
 
 .card-link {
@@ -517,3 +534,91 @@ body {
   color: #e42527;
   transform: translateX(5px);
 }
+
+.zoho-one-section {
+  width: 100%;
+  padding: 100px 7%;
+  background: linear-gradient(135deg, #17191f, #252a35);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.zoho-one-content {
+  max-width: 850;
+  margin: 0 auto;
+}
+
+.zoho-one-tag {
+  color: #f9b21d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.zoho-one-content h2 {
+  font-size: clamp(35px, 5vw, 60px);
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.zoho-one-content h2 span {
+    display: block;
+    color: #e42527;
+}
+
+/* Description */
+.zoho-one-description {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #c5c8d0;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* 45+ Highlight */
+.zoho-one-highlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.zoho-one-highlight span {
+    font-size: 45px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.zoho-one-highlight p {
+    color: #c5c8d0;
+    font-size: 15px;
+    max-width: 220px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* CTA Button */
+.zoho-one-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border: 1px solid #e42527;
+    border-radius: 30px;
+    background-color: #e42527;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.zoho-one-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(228, 37, 39, 0.25);
+}
+
