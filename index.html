@@ -105,41 +105,83 @@
           <p>Explore tools designed for different aspects of your business.</p>
         </div>
 
-        <div class="product-container">
-          <article class="product-card">
-            <h3>Zoho CRM</h3>
-            <p>
-              Manage customer relationships and keep track of your sales
-              activities.
-            </p>
-            <a href="#contact" class="card-link"> Explore more → </a>
-          </article>
+        <!-- PRODUCT SEARCH -->
+         <div class="product-search">
+          <input 
+                type="search"
+                id="productSearch"
+                placeholder="Search for an app..."
+                aria-label="Search products"
+          >
 
-          <article class="product-card">
-            <h3>Zoho Mail</h3>
-            <p>
-              Organise your professional communication and stay connected with
-              your team.
-            </p>
-            <a href="#contact" class="card-link"> Explore more → </a>
-          </article>
+          <!-- CATEGORY FILTERS -->
+           <div class="product-container">
+              <article class="filters" data-category="sales-marketing">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sales-marketing">Sales & Marketing</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="hr">HR</button>
+                <button class="filter-btn" data-filter="collaboration">Collaboration</button>
+              </article>
+           </div>
 
-          <article class="product-card">
-            <h3>Zoho Books</h3>
-            <p>
-              Keep your finances organised and simplify everyday accounting
-              tasks.
-            </p>
-            <a href="#contact" class="card-link"> Explore more → </a>
-          </article>
+           <!-- PRODUCT CARDS -->
+      
+              <article class="product-card" data-category="sales-marketing">
+                <div class="app-icon">CRM</div>
+                <h3>Zoho CRM</h3>
+                <p>Build better customer relationships and manage your sales pipeline.</p>
+                <a href="#contact" class="card-link">Learn More →</a>
+              </article>
 
-          <article class="product-card">
-            <h3>Zoho Projects</h3>
-            <p>
-              Plan tasks, manage projects and keep your team moving forward.
-            </p>
-            <a href="#contact" class="card-link"> Explore more → </a>
-          </article>
+              <article class="product-card" data-category="sales-marketing">
+              <div class="app-icon">MC</div>
+              <h3>Zoho Campaigns</h3>
+              <p>Create email campaigns and connect with your audience.</p>
+              <a href="#contact" class="card-link">Learn More →</a>
+              </article>
+
+              <article class="product-card" data-category="finance">
+                <div class="app-icon">ZB</div>
+                <h3>Zoho Books</h3>
+                <p>Manage your finances, invoices and everyday accounting.</p>
+                <a href="#contact" class="card-link">Learn More →</a>
+              </article>
+
+              <article class="product-card" data-category="finance">
+                <div class="app-icon">ZI</div>
+                <h3>Zoho Invoice</h3>
+                <p>Create professional invoices and track your payments.</p>
+                <a href="#contact" class="card-link">Learn More →</a>
+              </article>
+
+              <article class="product-card" data-category="collaboration">
+                <div class="app-icon">ZM</div>
+                <h3>Zoho Mail</h3>
+                <p>Keep proessional communication organised and secure.</p>
+                <a href="#contact" class="card-link">Learn More →</a>
+              </article>
+
+              <article class="product-card" data-category="finance">
+                <div class="app-icon">ZP</div>
+                <h3>Zoho Projects</h3>
+                <p>Plan projects, assign tasks and track team progress.</p>
+                <a href="#contact" class="card-link">Learn More →</a>
+              </article>
+
+              <article class="product-card" data-category="hr">
+                <div class="app-icon">ZP</div>
+                <h3>Zoho People</h3>
+                <p>Simplify employee management and HR operations.</p>
+                <a href="#contact" class="card-link">Learn More →</a>
+              </article>
+
+              <article class="product-card" data-category="collaboration">
+                <div class="app-icon">ZD</div>
+                <h3>Zoho Desk</h3>
+                <p>Manage customer support and deliver better service.</p>
+                <a href="#contact" class="card-link">Learn More →</a>
+              </article>
         </div>
       </section>
 
