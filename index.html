@@ -10,23 +10,37 @@
     <title>Zoho | Work Smarter</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
     <header class="site-header">
+
       <div class="logo">
-        <a href="#home" aria-label="Go to homepage"></a>
-        <img src="./images/zoho-logo.jpg" alt="Zoho Logo" />
+        <a href="#home" aria-label="Go to homepage">
+          <img src="./images/zoho-logo.jpg" alt="Zoho Logo" />
+        </a>
       </div>
-      <nav class="navbar">
+
+      <nav class="navbar" id="navbar">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#products">Services</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#zoho-one">Suite</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#stats">Impact</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
+
+      <a href="#products" class="nav-cta">Get Started</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navbar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
 
     <!-- MAIN CONTENT -->
@@ -35,8 +49,10 @@
       <!-- HERO SECTION -->
       <section class="main-hero" id="home">
         <div class="hero-content">
-          <!-- Animated Zoho Logo -->
-          <div class="logo-container">
+
+          <!-- Animated Zoho Logo -->      
+          <div class="hero-left">
+            <div class="logo-container">
             <div class="Box sub1">Z</div>
             <div class="Box sub2">O</div>
             <div class="Box sub3">H</div>
@@ -46,7 +62,9 @@
           <!-- Hero Text -->
           <div class="hero-text">
             <p class="hero-tag">INTRODUCING ZOHO</p>
-            <h1>Work Smarter.<span> Achieve More.</span></h1>
+            <h1>Work Smarter.
+                <span> Achieve More.</span>
+            </h1>
             <p class="hero-description">
               One connected workspace. Endless possibilities. Discover tools
               that simplify your work and help your business grow.
@@ -55,6 +73,11 @@
               <a href="#products" class="btn primary-btn"> Explore Products</a>
               <a href="#about" class="btn secondary-btn"> Learn More</a>
             </div>
+          </div>
+          </div>
+          
+          <div class="hero-image">
+            <img src="./images/team-work.jpg" alt="Team Collaboration">
           </div>
         </div>
 
@@ -139,7 +162,7 @@
           </article>
 
           <article class="product-card" data-category="sales-marketing">
-            <div class="app-icon">MC</div>
+            <div class="app-icon">ZC</div>
             <h3>Zoho Campaigns</h3>
             <p>Create email campaigns and connect with your audience.</p>
             <a href="#contact" class="card-link">Learn More →</a>
@@ -209,65 +232,138 @@
 
        </section>
 
-      <!-- FEATURES SECTION -->
-      <section class="feature-section" id="features">
+      <!-- CORE VALUES & PRIVACY SECTION -->
+
+      <section class="values-section" id="privacy">
         <div class="section-heading">
-          <p class="section-tag">WHY CHOOSE ZOHO?</p>
-          <h2>Make every workday count.</h2>
+          <p class="section-tag">WHAT MAKES US DIFFERENT?</p>
+          <h2>Business with values that matter.</h2>
+          <p>
+            Technology should work for people, not the other way around.
+            Here's what guides out approach.
+          </p>
         </div>
-        <div class="features-container">
-          <article class="feature-card">
-            <h3>Simple & Organised</h3>
+
+        <div class="value-container">
+
+          <article class="value-card">
+            <div class="value-icon">01</div>
+            <h3>Bootstrapped Business</h3>
             <p>
-              Keep your work organised with tools that make everyday tasks
-              easier.
+              We believe in building a sustainable business with independence and a long-term vision.
             </p>
           </article>
 
-          <article class="feature-card">
-            <h3>Better Collaboration</h3>
+          <article class="value-card">
+            <div class="value-icon">02</div>
+            <h3>No Advertising</h3>
             <p>
-              Bring people, projects and information together in one connected
-              workspace.
+              Our business model doesn't depend on advertising.
+              We focus on creating products that deliver value.
             </p>
           </article>
 
-          <article class="feature-card">
-            <h3>Built for Productivity</h3>
+          <article class="value-card">
+            <div class="value-icon">03</div>
+            <h3>Privacy First</h3>
             <p>
-              Spend less time managing tasks and more time getting things done.
+              Customer data deserves respect.
+              Privacy remains an important part of our philosophy.
             </p>
           </article>
         </div>
       </section>
 
-      <!-- CALL TO ACTION -->
-      <section class="cta-section">
-        <h2>Ready to work smarter?</h2>
+      <!-- STATS SECTION -->
 
-        <p>Explore tools that can help you take your work to the next level.</p>
+      <section class="stats-section" id="stats">
 
-        <a href="#products" class="btn secondary-btn"> Discover More </a>
-      </section>
-    </main>
+        <div class="stats-heading">
 
-    <!-- FOOTER -->
-    <footer class="site-footer" id="contact">
-      <div class="footer-content">
-        <h2>ZOHO</h2>
-        <p>Making work simpler, smarter and more connected.</p>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#products">Services</a>
-          <a href="#features">Portfolio</a>
+          <p class="section-tag">
+            OUR IMPACT
+          </p>
+          <h2>Making a difference, worldwide.</h2>
+          <p>Numbers that reflect our commitment to business around the world.</p>
+
         </div>
-      </div>
 
-      <p class="copyright">
-        © 2026 Zoho-Inspired Landing Page. Created for learning purposes.
-      </p>
-    </footer>
+        <div class="stats-container">
+
+          <div class="stat-card">
+            <h3 data-target="150">150M</h3>
+            <p>Users Worldwide</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 data-target="150">150+</h3>
+            <p>Countries Served</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 data-target="25">25+</h3>
+            <p>Years of Innovation</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 data-target="55">55+</h3>
+            <p>Business Applications</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FOOTER  -->
+
+      <footer class="footer" id="footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h2 class="footer-logo">Zoho<span>.</span></h2>
+            <p>
+              Building software that helps business grow, manage and transform the way they work.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Products</h3>
+            <a href="#products">CRM</a>
+            <a href="#products">Books</a>
+            <a href="#products">Mail</a>
+            <a href="#products">Projects</a>
+            <a href="#zoho-one">Zoho One</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Company</h3>
+            <a href="#privacy">About Us</a>
+            <a href="#privacy">Our Values</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#footer">Careers</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Resources</h3>
+            <a href="#footer">Help Center</a>
+            <a href="#footer">Blog</a>
+            <a href="#footer">Community</a>
+            <a href="#footer">Contact</a>
+          </div>
+
+          <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Get the latest updates and news from Zoho.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+
+          <div class="footer-bottom">
+            <p> &copy; 2026 Zoho Inspired Project. All rights reserved.</p>
+            <p>Designed with &#x2764;&#xFE0F;</p>
+          </div>
+        </div>
+      </footer>
     <script>
       lucide.createIcons();
     </script>
